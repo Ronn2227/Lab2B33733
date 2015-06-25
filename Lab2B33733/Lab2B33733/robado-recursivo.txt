@@ -1,0 +1,9 @@
+Al saco le caben: 1968 gramos
+El valor máximo conseguido fue de: 15752
+Los articulos que llenaron el saco fueron: 
+
+Anillo: 1 peso: 238 valor: 161
+Anillo: 2 peso: 246 valor: 196
+Corona: 15 peso: 546 valor: 8818
+Corona: 16 peso: 935 valor: 6577
+

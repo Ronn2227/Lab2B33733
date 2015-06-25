@@ -1,0 +1,5 @@
+Al saco le caben: 1968 gramos
+El valor máximo conseguido fue de: 0
+Los articulos que llenaron el saco fueron: 
+
+
