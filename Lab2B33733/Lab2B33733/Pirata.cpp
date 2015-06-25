@@ -14,10 +14,6 @@ Pirata::Pirata() {
 	this->tesoros = tesoro.getCantTesoros();
 	this->saco = rand() % 1001 + 1000; // Setea la capacidad del saco en un valor aleatorio entre 1000 y 2000.
 	this->valor = 0; // Inicializa el valor de la mejor combinación en 0.
-	//this->peso = 0; // Inicializa el peso acumulado en 0.
-
-	//this->vecBuscTesoro = new int[tesoros];
-
 	this->vecTesoro = new int[tesoros];
 
 	this->posiblesTesoros = tesoro.getTesoro();
@@ -33,7 +29,6 @@ Pirata::~Pirata() {
 	}
 	//delete posiblesTesoros; //(no se hace el delete a posibleTesoros porque se borra a lo que apunta vecTesoros en Tesoro y se cae el programa cuando se le hace delete en el desctructor del Tesoro)
 	vecCeros();
-	delete vecBuscTesoro;
 	delete vecTesoro;
 
 	fileRecursivo.close();
@@ -42,9 +37,10 @@ Pirata::~Pirata() {
 
 void Pirata::vecCeros(){
 	for (int i = 0; i < tesoros; ++i) {
-		//this->vecBuscTesoro[i] = 0;
 		this->vecTesoro[i] = 0;
 	}
+
+	this->valor = 0;
 }
 
 void Pirata::imprimirTesoroRecursivo() {
@@ -112,13 +108,14 @@ void Pirata::imprimirTesoroNoRecursivo() {
 }
 
 void Pirata::buscarTesoroRecursivo() {
+	vecCeros();
 	buscarTesoro(0, 0, 0, vecTesoro);
 }
 
 void Pirata::buscarTesoro(int posicion, int valAcum, int pesAcum, int* vecSelec) {
 	int* vecSeleccionados = new int[tesoros];
-	int valorAcumulado;
-	int pesoAcumulado;
+	int valorAcumulado = 0;
+	int pesoAcumulado = 0;
 
 	for (int i = 0; i < tesoros; i++) {
 		vecSeleccionados[i] = vecSelec[i];
@@ -138,13 +135,89 @@ void Pirata::buscarTesoro(int posicion, int valAcum, int pesAcum, int* vecSelec)
 				this->vecTesoro[i] = vecSeleccionados[i];
 			}
 		}
-	}
 
+		if (posicion + 1 < tesoros) {
+			buscarTesoro(posicion + 1, valorAcumulado, pesoAcumulado, vecSeleccionados);
+		}
+	}
+	/*
 	if (posicion + 1 < tesoros && pesoAcumulado + posiblesTesoros[posicion + 1]->getPeso() <= saco) {
 		buscarTesoro(posicion + 1, valorAcumulado, pesoAcumulado, vecSeleccionados);
 	}
+	*/
 }
 
-void Pirata::buscarMejorado() {
+void Pirata::buscarTesoroNoRecursivo() {
+	buscarIterativo();
+}
 
+void Pirata::buscarIterativo() {
+	vecCeros();
+	int cantidadIteraciones = 1;
+	int* vecSeleccionados = new int[tesoros];
+
+	for (int i = 0; i < tesoros; i++) { // Se calcula la cantidad posibles de iteraciones finales segun el tamaño del vector.
+		cantidadIteraciones = cantidadIteraciones * 2;
+	}
+
+	for (int i = 0; i < cantidadIteraciones; i++) {
+		int temp = i;
+		int donde = tesoros - 1;
+
+		for (int j = 0; j < tesoros; j++) {
+			vecSeleccionados[j] = 0;
+		}
+
+		if (temp == 1) {
+			vecSeleccionados[donde] = temp;
+		}
+		else {
+			while (temp != 0) { // Se calcula el valor binario de i que sirve para llenar el vector de seleccionados con todas las posibles combinaciones.
+				if (temp / 2 > 1) {
+					vecSeleccionados[donde] = temp % 2;
+					temp = temp / 2;
+				}
+				else {
+					vecSeleccionados[donde] = temp % 2;
+					donde--;
+					vecSeleccionados[donde] = temp / 2;
+					temp = 0;
+				}
+				donde--;
+			}
+		}
+
+		if (calcularPeso(vecSeleccionados) <= saco){
+			if (calcularValor(vecSeleccionados) > valor) {
+				valor = calcularValor(vecSeleccionados);
+				for (int j = 0; j < tesoros; j++) {
+					this->vecTesoro[j] = vecSeleccionados[j];
+				}
+			}
+		}
+	}
+}
+
+int Pirata::calcularPeso(int* vecSelec) {
+	int pesAcum = 0;
+
+	for (int i = 0; i < tesoros; i++) {
+		if (vecSelec[i] == 1) {
+			pesAcum = pesAcum + posiblesTesoros[i]->getPeso();
+		}
+	}
+
+	return pesAcum;
+}
+
+int Pirata::calcularValor(int* vecSelec) {
+	int valAcum = 0;
+
+	for (int i = 0; i < tesoros; i++) {
+		if (vecSelec[i] == 1) {
+			valAcum = valAcum + posiblesTesoros[i]->getValor();
+		}
+	}
+
+	return valAcum;
 }

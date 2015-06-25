@@ -20,9 +20,6 @@ private:
 	int tesoros; // Cantidad de tesoros.
 	int saco; // Peso que le cabe al saco.
 	int valor; // Valor de la mejor combinación.
-	//int peso; // Peso acumulado en la busqueda.
-
-	int* vecBuscTesoro; // Vector de enteros con el que se realizará la busqueda.
 
 	int* vecTesoro; // Vector de enteros donde se guarda la mejor conbinación.
 
@@ -30,16 +27,18 @@ private:
 
 	void vecCeros(); // Inicializa todos las posiciones de todos los vectores en 0.
 	void buscarTesoro(int posicion, int valAcum, int pesAcum, int* vecSelec); // Busca la mejor combinación del tesoro recursivamente.
-	void buscarMejorado(); // Busca la mejor combinación del tesoro de manera no recursiva (puntos extra).
+	void buscarIterativo(); // Busca la mejor combinación del tesoro de manera no recursiva (puntos extra).
+	int calcularPeso(int* vecSelec); // Calcula el peso total que tienen los elementos seleccionados representados en vecSelec.
+	int calcularValor(int* vecSelec); // Calcula el peso total que tienen los elementos seleccionados representados en vecSelec.
 
 public:
 
 	Pirata();
 	virtual ~Pirata();
 
-	void imprimirTesoroNoRecursivo(); // Guarda en el archivo la mejor combinación no recursiva.
 	void buscarTesoroRecursivo();
 	void buscarTesoroNoRecursivo();
+	void imprimirTesoroNoRecursivo(); // Guarda en el archivo la mejor combinación no recursiva.
 	void imprimirTesoroRecursivo(); // Guarda en el archivo la mejor combinación recursiva.
 };
 
