@@ -1,7 +1,7 @@
-Al saco le caben: 1321 gramos
-El valor máximo conseguido fue de: 12312
+Al saco le caben: 1062 gramos
+El valor máximo conseguido fue de: 4378
 Los articulos que llenaron el saco fueron: 
 
-Collar: 8 peso: 693 valor: 2345
-Corona: 11 peso: 582 valor: 9967
+Corona: 15 peso: 866 valor: 4297
+Moneda: 20 peso: 139 valor: 81
 

@@ -1,21 +1,27 @@
-Anillo: 1 peso: 205 valor: 102
-Anillo: 2 peso: 244 valor: 169
-Anillo: 3 peso: 260 valor: 196
-Anillo: 4 peso: 268 valor: 143
-Anillo: 5 peso: 293 valor: 157
-Anillo: 6 peso: 288 valor: 135
-Anillo: 7 peso: 256 valor: 117
+Anillo: 1 peso: 264 valor: 121
+Anillo: 2 peso: 283 valor: 106
+Anillo: 3 peso: 243 valor: 167
+Anillo: 4 peso: 251 valor: 121
+Anillo: 5 peso: 293 valor: 100
 
-Collar: 8 peso: 693 valor: 2345
-Collar: 9 peso: 974 valor: 3501
+Collar: 6 peso: 661 valor: 3809
+Collar: 7 peso: 676 valor: 3743
+Collar: 8 peso: 634 valor: 3487
+Collar: 9 peso: 620 valor: 2914
+Collar: 10 peso: 898 valor: 2802
 
-Corona: 10 peso: 1443 valor: 2599
-Corona: 11 peso: 582 valor: 9967
-Corona: 12 peso: 1929 valor: 3172
-Corona: 13 peso: 1622 valor: 8287
+Corona: 11 peso: 1206 valor: 3466
+Corona: 12 peso: 588 valor: 1815
+Corona: 13 peso: 1620 valor: 8975
+Corona: 14 peso: 683 valor: 1103
+Corona: 15 peso: 866 valor: 4297
 
-Moneda: 14 peso: 101 valor: 11
-Moneda: 15 peso: 104 valor: 8
-Moneda: 16 peso: 157 valor: 77
-Moneda: 17 peso: 132 valor: 69
-Moneda: 18 peso: 184 valor: 73
+Moneda: 16 peso: 161 valor: 57
+Moneda: 17 peso: 125 valor: 58
+Moneda: 18 peso: 171 valor: 39
+Moneda: 19 peso: 127 valor: 69
+Moneda: 20 peso: 139 valor: 81
+Moneda: 21 peso: 128 valor: 67
+Moneda: 22 peso: 185 valor: 52
+Moneda: 23 peso: 153 valor: 64
+Moneda: 24 peso: 149 valor: 33

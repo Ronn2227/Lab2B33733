@@ -13,7 +13,7 @@ int _tmain(int argc, _TCHAR* argv[]) {
 	ofstream fileTabla;
 	fileTabla.open("tabla-comparativa.txt");// Archivo con tabla comparativa.
 
-	for (int i = 0; i < 30; i++) {
+	for (int i = 1; i <= 30; i++) {
 		Pirata almaNegra;
 
 		// Se obtiene el tick de inicio.
@@ -26,9 +26,8 @@ int _tmain(int argc, _TCHAR* argv[]) {
 		// Se obtiene el tick de final.
 		auto fin = std::chrono::high_resolution_clock::now();
 
-		// Se convierte a nanosegundos y se imprime.
+		// Se convierte a nanosegundos.
 		nanoseconds ns = duration_cast<nanoseconds>(fin - inicio);
-		cout << "La duracion es " << ns.count() << " ns" << endl;
 
 		almaNegra.imprimirTesoroRecursivo(); // Guarda en el archivo para recursivo la solucion.
 
@@ -42,13 +41,20 @@ int _tmain(int argc, _TCHAR* argv[]) {
 		// Se obtiene el tick de final.
 		auto fin2 = std::chrono::high_resolution_clock::now();
 
-		// Se convierte a nanosegundos y se imprime.
+		// Se convierte a nanosegundos.
 		nanoseconds ns2 = duration_cast<nanoseconds>(fin2 - inicio2);
-		cout << "La duracion es " << ns2.count() << " ns" << endl;
 
 		almaNegra.imprimirTesoroNoRecursivo(); // Guarda en el archivo para no recursivo la solucion.
+
+		// Se guarda en el archivo de tabla comparativa.
+		fileTabla << "Ejecucion " << i << ": " << endl;
+		fileTabla << "La duracion del algoritmo recursivo es de:    " << ns.count() << " ns" << endl;
+		fileTabla << "La duracion del algoritmo no recursivo es de: " << ns2.count() << " ns" << endl;
+		fileTabla << endl;
+		system("pause"); // Detiene para poder revisar la respuesta cada ejecucion;
 	}
 
+	system("pause");
 	return 0;
 }
 

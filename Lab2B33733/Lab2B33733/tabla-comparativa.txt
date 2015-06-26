@@ -1,0 +1,120 @@
+Ejecucion 1: 
+La duracion del algoritmo recursivo es de:    4000700 ns
+La duracion del algoritmo no recursivo es de: 306017600 ns
+
+Ejecucion 2: 
+La duracion del algoritmo recursivo es de:    12998300 ns
+La duracion del algoritmo no recursivo es de: 151096700 ns
+
+Ejecucion 3: 
+La duracion del algoritmo recursivo es de:    6975000 ns
+La duracion del algoritmo no recursivo es de: 85037300 ns
+
+Ejecucion 4: 
+La duracion del algoritmo recursivo es de:    0 ns
+La duracion del algoritmo no recursivo es de: 9007900 ns
+
+Ejecucion 5: 
+La duracion del algoritmo recursivo es de:    3011600 ns
+La duracion del algoritmo no recursivo es de: 303006000 ns
+
+Ejecucion 6: 
+La duracion del algoritmo recursivo es de:    2010800 ns
+La duracion del algoritmo no recursivo es de: 28001300 ns
+
+Ejecucion 7: 
+La duracion del algoritmo recursivo es de:    15000100 ns
+La duracion del algoritmo no recursivo es de: 5637413800 ns
+
+Ejecucion 8: 
+La duracion del algoritmo recursivo es de:    4022900 ns
+La duracion del algoritmo no recursivo es de: 27000800 ns
+
+Ejecucion 9: 
+La duracion del algoritmo recursivo es de:    11967500 ns
+La duracion del algoritmo no recursivo es de: 1294053800 ns
+
+Ejecucion 10: 
+La duracion del algoritmo recursivo es de:    15008300 ns
+La duracion del algoritmo no recursivo es de: 5593318400 ns
+
+Ejecucion 11: 
+La duracion del algoritmo recursivo es de:    0 ns
+La duracion del algoritmo no recursivo es de: 18999600 ns
+
+Ejecucion 12: 
+La duracion del algoritmo recursivo es de:    2999000 ns
+La duracion del algoritmo no recursivo es de: 1319075400 ns
+
+Ejecucion 13: 
+La duracion del algoritmo recursivo es de:    6000000 ns
+La duracion del algoritmo no recursivo es de: 1307144900 ns
+
+Ejecucion 14: 
+La duracion del algoritmo recursivo es de:    3966200 ns
+La duracion del algoritmo no recursivo es de: 638060200 ns
+
+Ejecucion 15: 
+La duracion del algoritmo recursivo es de:    1009100 ns
+La duracion del algoritmo no recursivo es de: 84003500 ns
+
+Ejecucion 16: 
+La duracion del algoritmo recursivo es de:    31996600 ns
+La duracion del algoritmo no recursivo es de: 1318079900 ns
+
+Ejecucion 17: 
+La duracion del algoritmo recursivo es de:    14000800 ns
+La duracion del algoritmo no recursivo es de: 628030100 ns
+
+Ejecucion 18: 
+La duracion del algoritmo recursivo es de:    4000300 ns
+La duracion del algoritmo no recursivo es de: 43001800 ns
+
+Ejecucion 19: 
+La duracion del algoritmo recursivo es de:    3000200 ns
+La duracion del algoritmo no recursivo es de: 13035300 ns
+
+Ejecucion 20: 
+La duracion del algoritmo recursivo es de:    16001000 ns
+La duracion del algoritmo no recursivo es de: 1344078200 ns
+
+Ejecucion 21: 
+La duracion del algoritmo recursivo es de:    18004400 ns
+La duracion del algoritmo no recursivo es de: 5835346400 ns
+
+Ejecucion 22: 
+La duracion del algoritmo recursivo es de:    8000100 ns
+La duracion del algoritmo no recursivo es de: 160009000 ns
+
+Ejecucion 23: 
+La duracion del algoritmo recursivo es de:    9004700 ns
+La duracion del algoritmo no recursivo es de: 619030300 ns
+
+Ejecucion 24: 
+La duracion del algoritmo recursivo es de:    1000400 ns
+La duracion del algoritmo no recursivo es de: 80076800 ns
+
+Ejecucion 25: 
+La duracion del algoritmo recursivo es de:    92004000 ns
+La duracion del algoritmo no recursivo es de: 2668156400 ns
+
+Ejecucion 26: 
+La duracion del algoritmo recursivo es de:    22968200 ns
+La duracion del algoritmo no recursivo es de: 159041400 ns
+
+Ejecucion 27: 
+La duracion del algoritmo recursivo es de:    999700 ns
+La duracion del algoritmo no recursivo es de: 45035200 ns
+
+Ejecucion 28: 
+La duracion del algoritmo recursivo es de:    3999800 ns
+La duracion del algoritmo no recursivo es de: 44026900 ns
+
+Ejecucion 29: 
+La duracion del algoritmo recursivo es de:    1000100 ns
+La duracion del algoritmo no recursivo es de: 2967300 ns
+
+Ejecucion 30: 
+La duracion del algoritmo recursivo es de:    3104500 ns
+La duracion del algoritmo no recursivo es de: 2677167600 ns
+

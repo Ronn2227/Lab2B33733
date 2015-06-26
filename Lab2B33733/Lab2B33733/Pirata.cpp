@@ -140,11 +140,8 @@ void Pirata::buscarTesoro(int posicion, int valAcum, int pesAcum, int* vecSelec)
 			buscarTesoro(posicion + 1, valorAcumulado, pesoAcumulado, vecSeleccionados);
 		}
 	}
-	/*
-	if (posicion + 1 < tesoros && pesoAcumulado + posiblesTesoros[posicion + 1]->getPeso() <= saco) {
-		buscarTesoro(posicion + 1, valorAcumulado, pesoAcumulado, vecSeleccionados);
-	}
-	*/
+	
+	delete vecSeleccionados;
 }
 
 void Pirata::buscarTesoroNoRecursivo() {
@@ -162,17 +159,17 @@ void Pirata::buscarIterativo() {
 
 	for (int i = 0; i < cantidadIteraciones; i++) {
 		int temp = i;
-		int donde = tesoros - 1;
+		int donde = tesoros - 1; // Posicion del vector a modificar.
 
 		for (int j = 0; j < tesoros; j++) {
 			vecSeleccionados[j] = 0;
 		}
 
-		if (temp == 1) {
+		if (temp == 1) { // Se calcula el valor binario de i que sirve para llenar el vector de seleccionados con todas las posibles combinaciones.
 			vecSeleccionados[donde] = temp;
 		}
 		else {
-			while (temp != 0) { // Se calcula el valor binario de i que sirve para llenar el vector de seleccionados con todas las posibles combinaciones.
+			while (temp != 0) {
 				if (temp / 2 > 1) {
 					vecSeleccionados[donde] = temp % 2;
 					temp = temp / 2;
@@ -187,15 +184,17 @@ void Pirata::buscarIterativo() {
 			}
 		}
 
-		if (calcularPeso(vecSeleccionados) <= saco){
-			if (calcularValor(vecSeleccionados) > valor) {
-				valor = calcularValor(vecSeleccionados);
+		if (calcularPeso(vecSeleccionados) <= saco){ // Se calcula si la combinacion actual cabe dentro del saco.
+			if (calcularValor(vecSeleccionados) > valor) {// Se calcula si la combinacion tiene un valor mayor al valor global.
+				valor = calcularValor(vecSeleccionados); // Si es mayor se guarda como el mayor global.
 				for (int j = 0; j < tesoros; j++) {
 					this->vecTesoro[j] = vecSeleccionados[j];
 				}
 			}
 		}
 	}
+
+	delete vecSeleccionados;
 }
 
 int Pirata::calcularPeso(int* vecSelec) {
